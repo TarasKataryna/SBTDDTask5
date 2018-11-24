@@ -1,24 +1,19 @@
 ﻿using DataAccessLayer.Configirations;
 using DataAccessLayer.Models;
-using System;
-using System.Collections.Generic;
 using System.Data.Entity;
-using System.Data.Entity.ModelConfiguration;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Configuration;
 
 namespace DataAccessLayer
 {
     public class SushiOrderingContext:DbContext
     {
-        public SushiOrderingContext():base()
+        public SushiOrderingContext():base("Default")
         {
 
         }
         static SushiOrderingContext()
         {
-            Database.SetInitializer<SushiOrderingContext>(new SushiDbInitializer());
+            Database.SetInitializer(new SushiDbInitializer());
         }
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Sushi> Sushis { get; set; }

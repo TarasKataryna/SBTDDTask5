@@ -4,7 +4,7 @@ using System.Data.Entity;
 
 namespace DataAccessLayer
 {
-    public class SushiDbInitializer : CreateDatabaseIfNotExists<SushiOrderingContext>
+    public class SushiDbInitializer : DropCreateDatabaseAlways<SushiOrderingContext>
     {
         protected override void Seed(SushiOrderingContext context)
         {
