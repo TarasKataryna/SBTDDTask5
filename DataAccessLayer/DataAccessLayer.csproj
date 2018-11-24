@@ -53,6 +53,11 @@
     <Compile Include="Configirations\OrderConfiguration.cs" />
     <Compile Include="Configirations\OrderSushiConfiguration.cs" />
     <Compile Include="Configirations\SushiConfiguration.cs" />
+    <Compile Include="Contracts\IUnitOfWork.cs" />
+    <Compile Include="Contracts\Repositories\ICustomerRepository.cs" />
+    <Compile Include="Contracts\Repositories\IOrderRepository.cs" />
+    <Compile Include="Contracts\Repositories\IRepository.cs" />
+    <Compile Include="Contracts\Repositories\ISushiRepository.cs" />
     <Compile Include="Migrations\201811242214221_initial.cs" />
     <Compile Include="Migrations\201811242214221_initial.Designer.cs">
       <DependentUpon>201811242214221_initial.cs</DependentUpon>
@@ -62,6 +67,11 @@
     <Compile Include="Models\Order.cs" />
     <Compile Include="Models\OrderSushi.cs" />
     <Compile Include="Models\Sushi.cs" />
+    <Compile Include="Persistence\Repositories\CustomerRepository.cs" />
+    <Compile Include="Persistence\Repositories\OrderRepository.cs" />
+    <Compile Include="Persistence\Repositories\Repository.cs" />
+    <Compile Include="Persistence\Repositories\SushiRepository.cs" />
+    <Compile Include="Persistence\UnitOfWork.cs" />
     <Compile Include="SushiDbInitializer.cs" />
     <Compile Include="SushiOrderingContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -70,10 +80,7 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Contracts\Repositories\" />
-    <Folder Include="Persistence\Repositories\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201811242214221_initial.resx">
       <DependentUpon>201811242214221_initial.cs</DependentUpon>
