@@ -52,11 +52,6 @@
     <Compile Include="Configirations\OrderConfiguration.cs" />
     <Compile Include="Configirations\OrderSushiConfiguration.cs" />
     <Compile Include="Configirations\SushiConfiguration.cs" />
-    <Compile Include="Migrations\201811242136232_initial.cs" />
-    <Compile Include="Migrations\201811242136232_initial.Designer.cs">
-      <DependentUpon>201811242136232_initial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Order.cs" />
     <Compile Include="Models\OrderSushi.cs" />
@@ -72,11 +67,6 @@
   <ItemGroup>
     <Folder Include="Contracts\Repositories\" />
     <Folder Include="Persistence\Repositories\" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201811242136232_initial.resx">
-      <DependentUpon>201811242136232_initial.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
